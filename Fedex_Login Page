@@ -9,10 +9,18 @@
   <!-- Include Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
-  <!-- Gradient Div using Tailwind CSS classes -->
-  <div class="h-14 w-full bg-gradient-to-r from-cyan-500 to-blue-500"></div>
-
+<body class="flex flex-col justify-center items-center min-h-screen">
+    <img src="C:\Users\Brisa\Downloads\eh.png" alt="eh" class="resized-image">
+     <style>
+        body {
+      background: linear-gradient(145deg, #8e43bc, #fce1b5);
+      min-height: 100vh;
+    }
+    .resized-image {
+      width: 300px; 
+      height: auto;
+    }
+ </style>
   <div class="bg-white p-8 rounded shadow-md w-80 mt-4">
     <h2 class="text-2xl font-semibold mb-6">Login</h2>
     <form>
