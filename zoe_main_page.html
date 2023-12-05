@@ -14,8 +14,8 @@
 
    <style>
     body {
-      background: linear-gradient(180deg, #7e4f9c, #f1bd88);
-      max-height: 150vh;
+      height: 100%;
+      background: linear-gradient(180deg, #9072a2, #f1bd88);
     }
     .taskbar {
       position: fixed;
@@ -123,48 +123,48 @@
                     grid-flow-col gap-4 auto-cols-auto mt-auto ">
                     <div>
                         <div class = "mt-auto">
-                            <h1 class = "text-bold text-2xl">
-                                Urgent Alerts
-                            </h1>
+                            <h1 class = "font-bold text-2xl">  Urgent Alerts</h1>
                         </div>
-
-                        <!--All the different types of Alerts-->
-                        <!--Putting in a popup modul for the alerts here made by AI called Monica-->
+ <!--All the different types of Alerts-->
+      <!--Putting in a popup modul for the alerts here made by AI called Monica-->
                         <div class  = "mt-3">
                             <div>
                                 <!-- Trigger button -->
                                 <button class="bg-red-500 hover:bg-red-700 text-black font-bold py-2 px-4 rounded" onclick="openModal()">
-                                !!!Volume Alert!!!
+                                <div class="text-2xl">&#x1F4E6; Volume Alert &#x1F4E6;</div>
+                          
                                 <span>
-                                  10/20/2023 @10:30 AM
+                                  10/20/2023 at 10:30 AM
                                 </span>
                                 </button>
                                 <!-- Modal -->
-                                <div id="myModal" class="fixed z-50 inset-0 overflow-y-auto hidden">
+                                <div id="myModal" class="fixed z-50 inset-0 overflow-y-auto hidden mt-12">
                                 <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     
                                 <!-- Background overlay -->
-                                <div class="fixed inset-0 transition-opacity">
+                                <div class="fixed inset-0 transition-opacity mt-8">
                                 <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
                             </div>
     
                             <!-- Modal content -->
-                            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                            <div class="flex-justtify inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
     
                                     <!-- Modal header -->
                                     <div class="sm:flex sm:items-start">
-                                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
+                                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-white sm:mx-0 sm:h-10 sm:w-10">
                                     <!-- Icon or image here -->
-                            </div>
-                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                      </div>
+                            <div class="mt-3 text-left sm:mt-0 sm:ml-4 sm:text-left">
                                 <h3 class="text-lg leading-6 font-medium text-gray-900">
-                                    <span>!!!Volume Alert!!!</span>
+                                    <span>!!! Volume Alert !!!</span>
                                 </h3>
                                 <div class="mt-2">
                                     <p class="text-sm leading-5 text-gray-500">
                                         <span>Additional Inbound Trucks:</span>
                                         <p>Truck #MAC23 will arrive at 11:30 AM</p>
+                                        <textarea class="w-full h-20 mt-2 border border-gray-300 justify-center rounded-md resize-none focus:outline-none focus:ring-2 text-italic focus:ring-indigo-500 focus:border-transparent" placeholder=" Additional Notes"></textarea>
+                                   
                                     </p>
                                 </div>
                             </div>
@@ -197,12 +197,9 @@
         }
         </script>
     <!--End of the popup modal-->
-                            </div>
 
 
-                              
-    
-                        </div>
+      </div>            </div>
                         <div class  = "mt-3">
                             <!--Staff Alert-->
                             <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 hidden">
@@ -375,16 +372,12 @@
                 <div class = "grid">
 
                 </div>
-                <!--<div class ="flex justify-end text-1xl font-bold text-black  ">
-                    <span>8:30 pm</span>
-                   <p>70&deg;F</p> 
-                  </div>-->
-                  <!-- weather widget-->
 
-                  <div class = "absolute w-50 h-50 top-20 right-7 z-20">
+                  <!-- Weather widget-->
+                  <div class = "absolute w-50 h-50 top-20 right-7 z-10 rounded-lg bg-white">
                     <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
-                        <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://source.unsplash.com/300x150/?skyline);">
-                            <p class="px-2 py-1 text-sm tracki dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">Tennesse</p>
+                        <div class="flex items-end justify-end h-30 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://source.unsplash.com/300x150/?skyline);">
+                            <p class="px-2 py-1 text-sm tracki dark:text-gray-100 dark:bg-gray-800 bg-white rounded shadow-lg">Tennesse</p>
                         </div>
                         <div class="flex justify-between p-4">
                             <div class="flex flex-col flex-1 gap-4">
@@ -433,14 +426,12 @@
                 <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
                 <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
                 <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
-                
-                    
+                <!-- End of Weather Widget-->
+        
 
                 <!--This is the Routes widget-->
                 <div class = "mt-20 m-8 p-8 bg-gray-200 grid gap-4 rounded-lg auto-cols-auto ">
-                    <h1 class = "flex justify-items-center m-3 text-bold text-2xl">
-                        Routes
-                    </h1>
+                    <h1 class = "flex justify-items-center m-3 text-bold1 text-3xl">Routes</h1>
                     <div class = "m-8 p-8 bg-gray-200 grid gap-4 rounded-lg"></div>
                     <div class = "m-8 p-8 bg-gray-200 grid gap-4 rounded-lg"></div>
                     <div class = "m-8 p-8 bg-gray-200 grid gap-4 rounded-lg"></div>
@@ -448,7 +439,7 @@
                 <!--This is where the employee widget-->
                 <div class = " mt-20 m-8 p-8 bg-gray-200 grid gap-5 rounded-lg  auto-cols-auto">
                    <div class = "text-2xl">
-                    <h1 class = "flex justify-items-center m-3 text-bold text-2xl">
+                    <h1 class = "flex justify-items-center m-3 font-bold text-2xl">
                         Employees
                     </h1>
 
@@ -510,23 +501,7 @@
           
 
     </div>
-      </div>
-
-      
-      
-
-
-      
-
-<!--'rgba(255, 99, 132, 0.7)',
-                        'rgba(54, 162, 235, 0.7)',
-                        'rgba(255, 206, 86, 0.7)'-->
-
-      
-   
-
-   
-    
+  </div>
 </body>
     
 </html>
