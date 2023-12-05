@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Routes - Outbound</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet2" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" rel="stylesheet2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Routes - Outbound</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet2" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" rel="stylesheet2">
 </head>
 <body class = "flex flex-col justify-center items-center min-h-screen">
   <style>
@@ -16,9 +16,8 @@
 <div class="bg-gradient-to-b from-sky-100 to-sky-600 flex justify-center items-center h-screen select-none">  
     
   <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="absolute w-20 h-20 rounded-full cursor-pointer top-2 left-0" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="User dropdown">
-
-<!-- Dropdown menu -->
-<div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+  <!-- Dropdown menu -->
+  <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>John Doe</div>
       <div class="font-medium truncate">johndoe@fedex.com</div>
@@ -37,324 +36,323 @@
     <div class="py-1">
       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
     </div>
-</div>
+  </div>
 
     <span class="absolute top-2 left-20 text-left w-full p-4 text-3xl text-gray-800">Welcome, John Doe</span>
     <span class="absolute top-10 left-20 text-left w-full p-4 text-2xl text-gray-800">Memphis, TN</span>
     <div class="p-20 pl-96 pt-44 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div class ="pl-96"></div>
+      <div class ="pl-96"></div>
         <div class="relative bottom-40 right-96">
           <div class = "relative top-2 left-1">
             <img src="https://img.icons8.com/ios-filled/50/000000/home.png" class="w-10 h-10" alt="Home Icon"> </div>
-            </div>
-        <a href="#">
-             <h5 class="relative bottom-48  right-80 mb-2 text-4xl  font-bold tracking-tight text-gray-900 dark:text-white">Routes 
-                <h5 class="left-60" </h5>
-        </a> 
+          </div>
+          <a href="#">
+            <h5 class="relative bottom-48  right-80 mb-2 text-4xl  font-bold tracking-tight text-gray-900 dark:text-white">Routes 
+              <h5 class="left-60" </h5>
+          </a> 
         <div class="flex items-center justify-end">
-            <div class="relative bottom-56 right-96">
-              <div class="relative bottom-4 right-20" >
-        <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Outbound <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg>
-            </button>
+          <div class="relative bottom-56 right-96">
+            <div class="relative bottom-4 right-20" >
+              <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Outbound 
+                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
             
-            <!-- Dropdown menu -->
-            <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
-              <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    Inbound
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    Outbound
-                  </a>
-                </li>
-              </ul>
-            </div> 
+              <!-- Dropdown menu -->
+              <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
+                <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
+                  <li>
+                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                      Inbound
+                   </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                     Outbound
+                    </a>
+                  </li>
+                </ul>
+              </div> 
+            </div>
+          </div>
         </div>
-      </div>
+
+        <style>
+          ;table-container {
+            overflow-x: auto; /* Add horizontal scroll if needed */
+            display: none; /* Initially hides the table */
+          } 
+          table {
+            border-collapse: collapse;
+            width: 200%;
+            margin-bottom: 20px;
+          }
+          table, th, td {
+            border: 1px solid black;
+            background-color: rgb(211, 211, 211);
+          }
+          th, td {
+            padding: 10px;
+            text-align: left;
+          }
+          .red-cell {
+            background-color: red;
+            color: white; /* Optional: Set text color to white for better visibility on red background */
+          }
+          .green-cell {
+            background-color: green;
+            color: white; /* Optional: Set text color to white for better visibility on red background */
+          }
+          .yellow-cell {
+            background-color: yellow;
+            color: black; /* Optional: Set text color to white for better visibility on red background */
+          }
+        </style>
+
+        <div class="flex gap-4 mt-4">
+          <button onclick="showTable('post')" style="background-color: #3490dc; color: white;" class="font-bold px-4 py-2 rounded">Post</button>
+          <button onclick="showTable('inProgress')" style="background-color: #f59e0b; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">In Progress</button>
+          <button onclick="showTable('upcoming')" style="background-color: #38a169; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">Upcoming</button>
+        </div>
+
+        <div class="table-container relative right-80 bottom-20" id="postTable">
+          <div class="relative right-8">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Time</th>
+                  <th>Type</th>
+                  <th>Volume</th>
+                  <th>Employee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>231825</td>
+                  <td>1:24 pm</td>
+                  <td>Plane</td>
+                  <td>25%</td>
+                  <td>John Doe</td>
+                </tr>
+                <tr>
+                  <td class="red-cell">251856</td>
+                  <td class="red-cell">3:21 pm</td>
+                  <td class="red-cell">Plane</td>
+                  <td class="red-cell">85%</td>
+                  <td class="red-cell">Abby Lee</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                  <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                  <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                   <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="red-cell">251856</td>
+                  <td class="red-cell">3:21 pm</td>
+                  <td class="red-cell">Plane</td>
+                  <td class="red-cell">85%</td>
+                  <td class="red-cell">Abby Lee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-container relative right-80 bottom-20" id="inProgressTable">
+          <div class="relative right-8">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Time</th>
+                  <th>Type</th>
+                  <th>Volume</th>
+                  <th>Employee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>231825</td>
+                  <td>Now</td>
+                  <td>Plane</td>
+                  <td>25%</td>
+                  <td>John Doe</td>
+                </tr>
+                <tr>
+                  <td class="yellow-cell">251856</td>
+                  <td class="yellow-cell">3:21 pm</td>
+                  <td class="yellow-cell">Truck</td>
+                  <td class="yellow-cell">85%</td>
+                  <td class="yellow-cell">Abby Lee</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                  <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                  <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="green-cell">251856</td>
+                  <td class="green-cell">3:21 pm</td>
+                  <td class="green-cell">Plane</td>
+                  <td class="green-cell">85%</td>
+                  <td class="green-cell">Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td class="yellow-cell">251856</td>
+                  <td class="yellow-cell">3:21 pm</td>
+                  <td class="yellow-cell">Plane</td>
+                  <td class="yellow-cell">85%</td>
+                  <td class="yellow-cell">Abby Lee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-container relative right-80 bottom-20" id="upcomingTable">
+          <div class="relative right-8">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Time</th>
+                  <th>Type</th>
+                  <th>Volume</th>
+                  <th>Employee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>231825</td>
+                  <td>1:24 pm</td>
+                  <td>Plane</td>
+                  <td>25%</td>
+                  <td>John Doe</td>
+                </tr>
+                <tr>
+                  <td>251856</td>
+                  <td>3:21 pm</td>
+                  <td>Plane</td>
+                  <td>85%</td>
+                  <td>Abby Lee</td>
+                </tr>
+                <tr>
+                  <td>251856</td>
+                  <td>3:21 pm</td>
+                  <td>Plane</td>
+                  <td>85%</td>
+                  <td>Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td>251856</td>
+                  <td>3:21 pm</td>
+                  <td>Plane</td>
+                  <td>85%</td>
+                  <td>Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td>251856</td>
+                  <td>3:21 pm</td>
+                  <td>Plane</td>
+                  <td>85%</td>
+                  <td>Mike Schimet</td>
+                </tr>
+                <tr>
+                  <td>251856</td>
+                  <td>3:21 pm</td>
+                  <td>Plane</td>
+                  <td>85%</td>
+                  <td>Abby Lee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <script>
+          function showTable(filter){
+            document.getElementById('postTable').style.display = 'none';
+            document.getElementById('inProgressTable').style.display = 'none';
+            document.getElementById('upcomingTable').style.display = 'none';
+            if (filter === 'post'){
+              document.getElementById('postTable').style.display = 'block';
+            }
+            else if (filter === 'inProgress'){
+              document.getElementById('inProgressTable').style.display = 'block';
+            }
+            else if (filter === 'upcoming'){
+              document.getElementById('upcomingTable').style.display = 'block';
+            }
+          }
+        </script>
     </div>
-
-    <style>
-    ;table-container {
-      overflow-x: auto; /* Add horizontal scroll if needed */
-      display: none; /* Initially hides the table */
-    } 
-    table {
-      border-collapse: collapse;
-      width: 200%;
-      margin-bottom: 20px;
-    }
-    table, th, td {
-      border: 1px solid black;
-      background-color: rgb(211, 211, 211);
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    .red-cell {
-      background-color: red;
-      color: white; /* Optional: Set text color to white for better visibility on red background */
-    }
-    .green-cell {
-      background-color: green;
-      color: white; /* Optional: Set text color to white for better visibility on red background */
-    }
-  </style>
-
-<div class="flex gap-4 mt-4">
-  <button onclick="showTable('post')" style="background-color: #3490dc; color: white;" class="font-bold px-4 py-2 rounded">Post</button>
-  <button onclick="showTable('inProgress')" style="background-color: #f59e0b; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">In Progress</button>
-  <button onclick="showTable('upcoming')" style="background-color: #38a169; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">Upcoming</button>
-</div>
-
-<div class="table-container relative right-80 bottom-20" id="postTable">
-  <div class="relative right-8">
-  <table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Time</th>
-      <th>Type</th>
-      <th>Volume</th>
-      <th>Employee</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>231825</td>
-      <td>1:24 pm</td>
-      <td>Plane</td>
-      <td>25%</td>
-      <td>John Doe</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-<div class="table-container relative right-80 bottom-20" id="inProgressTable">
-  <div class="relative right-8">
-  <table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Time</th>
-      <th>Type</th>
-      <th>Volume</th>
-      <th>Employee</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>231825</td>
-      <td>1:24 pm</td>
-      <td>Plane</td>
-      <td>25%</td>
-      <td>John Doe</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-<div class="table-container relative right-80 bottom-20" id="upcomingTable">
-  <div class="relative right-8">
-  <table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Time</th>
-      <th>Type</th>
-      <th>Volume</th>
-      <th>Employee</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>231825</td>
-      <td>1:24 pm</td>
-      <td>Plane</td>
-      <td>25%</td>
-      <td>John Doe</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="green-cell">251856</td>
-      <td class="green-cell">3:21 pm</td>
-      <td class="green-cell">Plane</td>
-      <td class="green-cell">85%</td>
-      <td class="green-cell">Mike Schimet</td>
-    </tr>
-    <tr>
-      <td class="red-cell">251856</td>
-      <td class="red-cell">3:21 pm</td>
-      <td class="red-cell">Plane</td>
-      <td class="red-cell">85%</td>
-      <td class="red-cell">Abby Lee</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-<script>
-  function showTable(filter){
-    document.getElementById('postTable').style.display = 'none';
-    document.getElementById('inProgressTable').style.display = 'none';
-    document.getElementById('upcomingTable').style.display = 'none';
-    if (filter === 'post'){
-      document.getElementById('postTable').style.display = 'block';
-    }
-    else if (filter === 'inProgress'){
-      document.getElementById('inProgressTable').style.display = 'block';
-    }
-    else if (filter === 'upcoming'){
-      document.getElementById('upcomingTable').style.display = 'block';
-    }
-  }
-</script>
-
-</div>
 
 
 <div class="absolute w-50 h-50 top-2 right-7">
-    <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
-        <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://t4.ftcdn.net/jpg/03/06/22/35/360_F_306223540_1WzKvoxObZYt1ErzeuiA0q3cBfNtfjkX.jpg);">
-            <p class="px-2 py-1 text-sm tracki dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">Memphis</p>
-        </div>
-        <div class="flex justify-between p-4">
-            <div class="flex flex-col flex-1 gap-4">
-                <div class="flex justify-between">
-                    <div class="flex gap-2">
-                        <span class="text-5xl font-semibold">36°</span>
-                        <span class="text-lg dark:text-gray-400">/ 28°</span>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12 dark:text-yellow-400 fill-current shrink-0">
-                        <!-- SVG content -->
-                    </svg>
-                </div>
-                <p class="text-sm">Mostly sunny throughout the day. <br>6-10 KPH winds.</p>
-            </div>
-            <div class="text-sm leadi">
-                <div class="flex items-center"></div>
-            </div>
-        </div>
-        <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
-            <div class="flex items-center space-x-1">
-                <span class="font-bold">8</span>
-                <span class="text-sm">UV</span>
-            </div>
-            <div class="flex items-center space-x-1">
-                <span class="font-bold">5%</span>
-                <span class="text-sm">Precip</span>
-            </div>
-            <div class="flex items-center space-x-1">
-                <span class="font-bold">14°</span>
-                <span class="text-sm">Dew Point</span>
-            </div>
-        </div>
+  <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
+    <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://t4.ftcdn.net/jpg/03/06/22/35/360_F_306223540_1WzKvoxObZYt1ErzeuiA0q3cBfNtfjkX.jpg);">
+      <p class="px-2 py-1 text-sm tracki dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">Memphis</p>
     </div>
+    <div class="flex justify-between p-4">
+      <div class="flex flex-col flex-1 gap-4">
+        <div class="flex justify-between">
+          <div class="flex gap-2">
+            <span class="text-5xl font-semibold">36°</span>
+            <span class="text-lg dark:text-gray-400">/ 28°</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12 dark:text-yellow-400 fill-current shrink-0">
+            <!-- SVG content -->
+          </svg>
+        </div>
+        <p class="text-sm">Mostly sunny throughout the day. <br>6-10 KPH winds.</p>
+      </div>
+      <div class="text-sm leadi">
+        <div class="flex items-center"></div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
+      <div class="flex items-center space-x-1">
+        <span class="font-bold">8</span>
+        <span class="text-sm">UV</span>
+      </div>
+      <div class="flex items-center space-x-1">
+        <span class="font-bold">5%</span>
+        <span class="text-sm">Precip</span>
+      </div>
+      <div class="flex items-center space-x-1">
+        <span class="font-bold">14°</span>
+        <span class="text-sm">Dew Point</span>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
-
-<!-- Required chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
 </body>
 </html>
