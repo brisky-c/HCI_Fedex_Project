@@ -1,198 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet2" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" rel="stylesheet2">
-</head>
-<body class = "flex flex-col justify-center items-center min-h-screen">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-      body {
-      background: linear-gradient(145deg, #8e43bc, #ffe9d4)
+    body {
+      background: linear-gradient(180deg, #7e4f9c, #f1bd88);
+      min-height: 100vh;
+    }.taskbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #7e4f9c; /* Customize taskbar background color */
+      color: white; /* Customize taskbar text color */
+      padding: 10px 20px; /* Adjust padding as needed */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+      display: flex; /* Utilize flexbox to align items */
+      align-items: center; /* Vertically center items */
+      justify-content: space-between; /* Space items apart */
+    }
+    /* Optional styles for content below the taskbar */
+    .content {
+      flex: 1;
+      padding-top: 60px; /* Adjust padding to prevent content from being hidden behind the taskbar */
+      padding-left: 20px;
+      padding-right: 20px;
+      z-index: 999;
+    }
+    /* Style for the profile picture */
+    .profile-picture {
+      width: 45px; /* Adjust width as needed */
+      height: 40px; /* Adjust height as needed */
+      border-radius: 50%; /* Make it circular */
+      margin-right: auto; /* Add some spacing between the picture and FedEx logo */
+    }
+    .fedex-logo {
+      width: 100px; /* Adjust width as needed */
+      height: 30px; /* Adjust height as needed */
+    }
+    .custom-card { /* Adjust background color if needed */
+      padding: 8px; /* Adjust padding */
+      border-radius: 8px; /* Add border-radius */
+    }
+    .image-sharpen {
+      filter: contrast(130%);
+    }
   </style>
-
-<div class="bg-gradient-to-b from-sky-100 to-sky-600 flex justify-center items-center h-screen select-none">  
-    
-  <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="absolute w-20 h-20 rounded-full cursor-pointer top-2 left-0" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="User dropdown">
-
-<!-- Dropdown menu -->
-<div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-      <div>Bonnie Green</div>
-      <div class="font-medium truncate">name@flowbite.com</div>
+</head>
+<body>
+  <!-- Taskbar -->
+  <div class="taskbar">
+     <!-- Profile Picture and Text Beside -->
+  <div class="flex items-center">
+    <!-- Profile Picture -->
+    <button id="profile-dropdown" class="focus:outline-none">
+    <img src="https://media.discordapp.net/attachments/1146175324925743117/1181437741603500202/fedex_truck.jpg?ex=65810ea3&is=656e99a3&hm=bf6c863cd0d3ac4e9acd4731c33bee1fd0ed810dab3475a34c3635d45d777f93&=&format=webp" alt="Profile Picture" class="w-8 h-8 rounded-full image-sharpen">
+    </button>
+    <!-- Text Beside Profile Picture -->
+    <div class="ml-2">
+      <p class="text-sm font-semibold">Welcome Jane Doe</p>
+      <p class="text-xs italic">Memphis, TN</p>
     </div>
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-    </ul>
-    <div class="py-1">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-    </div>
-</div>
-
-    <span class="absolute top-2 left-20 text-left w-full p-4 text-3xl text-gray-800">Welcome, John Doe</span>
-    <span class="absolute top-10 left-20 text-left w-full p-4 text-2xl text-gray-800">Memphis, TN</span>
-    <div class="p-20 pl-96 pt-44 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div class ="pl-96"></div>
-        <div class="relative bottom-40 right-96">
-          <div class = "relative top-2 left-1">
-            <img src="https://img.icons8.com/ios-filled/50/000000/home.png" class="w-10 h-10" alt="Home Icon"> </div>
-            </div>
-        <a href="#">
-            <h5 class="relative bottom-48  right-80 mb-2 text-4xl  font-bold tracking-tight text-gray-900 dark:text-white">Employees
-                <h5 class="left-60" </h5>
-        </a>
-        <div class="flex items-center justify-end">
-            <div class="relative bottom-36 right-full">
-        <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Clocked In <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg>
-            </button>
-            
-            <!-- Dropdown menu -->
-            <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
-              <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Jese Leos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Robert Gough
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Bonnie Green
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Leslie Livingston
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Michael Gough
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Joseph Mcfall
-                  </a>
-                </li>
-                      <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Roberta Casas
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                    <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
-                    Neil Sims
-                  </a>
-                </li>
-              </ul>
-              <a href="#" class="flex items-center p-3 text-sm font-medium text-blue-600 border-t border-gray-200 rounded-b-lg bg-gray-50 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
-                  <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
-                  </svg>
-                  Add new user
-              </a>
-            </div> 
-        </div>
-    </div>
-    <div class="flex items-center justify-end">
-      <div class="relative bottom-36 -left-24">
-        <div class ="relative bottom-9 -left-11">
-  <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Clocked Out <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-      </svg>
-      </button>
-      
-      <!-- Dropdown menu -->
-      <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
-        <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
-              Jese Leos
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Jese image">
-              Robert Gough
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-              Bonnie Green
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Jese image">
-              Leslie Livingston
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Jese image">
-              Michael Gough
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Jese image">
-              Joseph Mcfall
-            </a>
-          </li>
-                <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-              Roberta Casas
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-              <img class="w-6 h-6 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
-              Neil Sims
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="flex items-center p-3 text-sm font-medium text-blue-600 border-t border-gray-200 rounded-b-lg bg-gray-50 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
-            <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-              <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
-            </svg>
-            Add new user
-        </a>
-      </div> 
   </div>
+
+  <!-- FedEx Logo -->
+  <a href="https://www.fedex.com/en-us/home.html" target="_blank">
+    <img src="https://media.discordapp.net/attachments/1146175324925743117/1181437741842579489/logo.png?ex=65810ea3&is=656e99a3&hm=ee1e47703fb99704d7b450205ada57eac46818d43ab367969e42f1733728bed7&=&format=webp&quality=lossless" alt="FedEx Logo" class="fedex-logo">
+  </a>
 </div>
 </div>
+     <!-- Dropdown Content - Initially Hidden -->
+     <div id="dropdown-content" class="absolute hidden bg-white rounded shadow-md py-2 mt-2 w-32">
+      <!-- Dropdown Links -->
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+      <a href="fedex_login_page.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+    </div>
+  </div>
+  <script>
+    // JavaScript to toggle dropdown visibility
+    document.getElementById('profile-dropdown').addEventListener('click', function(event) {
+      event.stopPropagation();
+      document.getElementById('dropdown-content').classList.toggle('hidden');
+    });
+  
+    // Close dropdown if user clicks outside of it
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('dropdown-content');
+      if (!event.target.closest('#profile-dropdown') && !event.target.closest('#dropdown-content')) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  
+  <!-- Content below the taskbar -->
 
-
-
-<div class="absolute w-50 h-50 top-2 right-7">
+    <!-- Weather card-->
+    <div class="absolute w-50 h-50 top-20 right-7">
     <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
         <div class="flex items-end justify-end h-32 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://t4.ftcdn.net/jpg/03/06/22/35/360_F_306223540_1WzKvoxObZYt1ErzeuiA0q3cBfNtfjkX.jpg);">
             <p class="px-2 py-1 text-sm tracki dark:text-gray-100 uppercase dark:bg-gray-800 bg-opacity-75 rounded shadow-lg">Memphis</p>
@@ -230,42 +138,204 @@
         </div>
     </div>
 </div>
+  
+<!--First Card -->  
+<div class ="content mt-8 flex justify-center">
+  <div class="p-20 pl-96 pt-44 bg-white rounded shadow-md w-auto mx-4">
+    <div class = "pl-96"></div>
+    <!-- Content Inside Card -->
+    
+    <div class="relative bottom-40 right-96">
+        <a href = "zoe_main_page.html">
+        <div class = "relative top-2 left-1">
+          <img src="https://img.icons8.com/ios-filled/50/000000/home.png" class="w-10 h-10" alt="Home Icon"> </div>
+          </a>
+    </div>
+    <h2 class="relative bottom-48 right-80 text-4xl font-semibold mb-4">Employees</h2>
+
+  <div class="flex items-center justify-end">
+    <div class="relative bottom-36 right-full">
+        
+            
+<button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Clocked In <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+    </button>
+    
+    <!-- Dropdown menu for Clocked in -->
+    <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
+      <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Jese Leos
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Robert Gough
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Bonnie Green
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Leslie Livingston
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Michael Gough
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Joseph Mcfall
+          </a>
+        </li>
+              <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Roberta Casas
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Neil Sims
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="flex items-center p-3 text-sm font-medium text-blue-600 border-t border-gray-200 rounded-b-lg bg-gray-50 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
+          <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+            <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
+          </svg>
+          Add new user
+      </a>
+    </div> 
+
+
+</div>
+</div>
+<div class="flex items-center justify-end">
+    <div class="relative bottom-36 -left-24">
+        <div class = "relative bottom-9 -left-11">
+<button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Clocked Out <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+    </button>
+    
+    <!-- Dropdown menu for Clocked Out -->
+    <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
+      <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Jese Leos
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Robert Gough
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Bonnie Green
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Leslie Livingston
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Michael Gough
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Joseph Mcfall
+          </a>
+        </li>
+              <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Roberta Casas
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <img class="w-6 h-6 me-2 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Jese image">
+            Neil Sims
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="flex items-center p-3 text-sm font-medium text-blue-600 border-t border-gray-200 rounded-b-lg bg-gray-50 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
+          <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+            <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/>
+          </svg>
+          Add new user
+      </a>
+    </div> 
+</div>
+</div>
+
+</div>
 <div class="shadow-lg rounded-lg overflow-hidden relative -top-20 right-32">
-  <div class = "relative top-0 right-7"></div>
-  <div class="py-3 px-5 bg-gray-50">Time Chart</div>
-  <canvas class="p-1 ml-40 mr-40" id="chartPie"></canvas>
-</div>
+    <div class = "relative top-0 right-7"></div>
+    <div class="py-3 px-5 bg-gray-50">Time Chart</div>
+    <canvas class="p-1 ml-40 mr-40" id="chartPie"></canvas>
+  </div>
+  
+  </div>
+  
+  <!-- Required chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Chart pie -->
+  <script>
+  const dataPie = {
+  labels: ["Clocked in", "Clocked out"],
+  datasets: [
+    {
+      label: "Employee Count",
+      data: [300, 100],
+      backgroundColor: [
+        "rgb(133, 105, 241)",
+        "rgb(101, 143, 241)",
+      ],
+      hoverOffset: 4,
+    },
+  ],
+  };
+  
+  const configPie = {
+  type: "pie",
+  data: dataPie,
+  options: {},
+  };
+  
+  var chartBar = new Chart(document.getElementById("chartPie"), configPie);
+  </script>
+
 
 </div>
 
-<!-- Required chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- Chart pie -->
-<script>
-const dataPie = {
-labels: ["Clocked in", "Clocked out"],
-datasets: [
-  {
-    label: "Employee Count",
-    data: [300, 100],
-    backgroundColor: [
-      "rgb(133, 105, 241)",
-      "rgb(101, 143, 241)",
-    ],
-    hoverOffset: 4,
-  },
-],
-};
-
-const configPie = {
-type: "pie",
-data: dataPie,
-options: {},
-};
-
-var chartBar = new Chart(document.getElementById("chartPie"), configPie);
-</script>
 <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
 </body>
 </html>
