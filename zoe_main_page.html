@@ -10,7 +10,515 @@
     <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" 
       rel="stylesheet" href = "output.css">
     
+    <!--https://www.w3schools.co<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Tailwind CSS CDN link -->
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" 
+      rel="stylesheet" href = "output.css">
+    
     <!--https://www.w3schools.com/css/css_dropdowns.asp-->
+
+   <style>
+    body {
+      height: 100%;
+      background: linear-gradient(180deg, #9072a2, #f1bd88);
+    }
+    .taskbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #7e4f9c; /* Customize taskbar background color */
+      color: white; /* Customize taskbar text color */
+      padding: 10px 20px; /* Adjust padding as needed */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+      display: flex; /* Utilize flexbox to align items */
+      align-items: center; /* Vertically center items */
+      justify-content: space-between; /* Space items apart */
+      z-index: 1000;
+    }
+    /* Optional styles for content below the taskbar */
+    .content {
+      flex: 1;
+      padding-top: 60px; /* Adjust padding to prevent content from being hidden behind the taskbar */
+      padding-left: 20px;
+      padding-right: 20px;
+      z-index: 999;
+    }
+    /* Style for the profile picture */
+    .profile-picture {
+      width: 45px; /* Adjust width as needed */
+      height: 40px; /* Adjust height as needed */
+      border-radius: 50%; /* Make it circular */
+      margin-right: auto; /* Add some spacing between the picture and FedEx logo */
+    }
+    .fedex-logo {
+      width: 100px; /* Adjust width as needed */
+      height: 30px; /* Adjust height as needed */
+    }
+    .custom-card { /* Adjust background color if needed */
+      padding: 8px; /* Adjust padding */
+      border-radius: 8px; /* Add border-radius */
+    }
+    .image-sharpen {
+      filter: contrast(130%);
+    }
+    .urgent-section {
+      margin-top: 10px;
+    }
+
+   </style>
+</head>
+<body>
+  <!-- Taskbar -->
+  <div class="taskbar">
+     <!-- Profile Picture and Text Beside -->
+  <div class="flex items-center">
+    <!-- Profile Picture -->
+    <button id="profile-dropdown" class="focus:outline-none">
+    <img src="C:\Users\Brisa\Documents\Fedex Project\fedex_truck.jpg" alt="Profile Picture" class="w-8 h-8 rounded-full image-sharpen">
+    </button>
+    <!-- Text Beside Profile Picture -->
+    <div class="ml-2">
+      <p class="text-sm font-semibold">Welcome Jane Doe</p>
+      <p class="text-xs italic">Memphis, TN</p>
+    </div>
+  </div>
+
+  <!-- FedEx Logo -->
+  <a href="https://www.fedex.com/en-us/home.html" target="_blank">
+    <img src="C:\Users\Brisa\Documents\Fedex Project\logo.png" alt="FedEx Logo" class="fedex-logo">
+  </a>
+
+     <!-- Dropdown Content - Initially Hidden -->
+     <div id="dropdown-content" class="absolute hidden bg-white rounded shadow-md py-2 mt-16 w-32">
+      <!-- Dropdown Links -->
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+      <a href="fedex_login_page.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:no-underline">Logout</a>
+    </div>
+  </div>
+  <script>
+      const dropdown = document.getElementById('dropdown-content');
+      const profileDropdown = document.getElementById('profile-dropdown');
+      
+      // Toggle dropdown visibility
+      profileDropdown.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+    
+      // Close dropdown if user clicks outside of it
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('#profile-dropdown')) {
+          dropdown.classList.add('hidden');
+        }
+      });
+    
+      // Allow logout when clicking the logout button
+      const logoutButton = document.getElementById('logout-button');
+      logoutButton.addEventListener('click', function() {
+        window.location.href = 'fedex_login_page.html';
+      });
+
+    </script>       
+</head>
+
+<!--Making the Fedex Main Page-->
+<body class = "content mt-8 flex justify-left mt-5">
+  <div class="urgent-alerts-container">
+    
+    <!--This would be the first container on the left side-->
+                <!--Here is the Urgent Alert Section-->
+                <div class = "m-4 p-8  grid bg-white rounded-lg  
+                    grid-flow-col gap-4 auto-cols-auto mt-auto ">
+                    <div>
+                        <div class = "mt-auto">
+                            <h1 class = "font-bold text-2xl">  Urgent Alerts</h1>
+                        </div>
+        <!--All the different types of Alerts-->
+      <!--Putting in a popup modul for the alerts here made by AI called Monica-->
+                        <div class  = "mt-3">
+                            <div>
+                                <!-- Trigger button -->
+                                <button class="bg-red-500 hover:bg-red-700 text-black font-bold py-2 px-4 rounded" onclick="openModal()">
+                                <div class="text-2xl">&#x1F4E6; Volume Alert &#x1F4E6;</div>
+                                <span>10/20/2023 at 10:30 AM </span>
+                                </button>
+                                <!-- Modal -->
+                                <div id="myModal" class="fixed z-50 inset-0 overflow-y-auto hidden mt-12">
+                                <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    
+                                <!-- Background overlay -->
+                                <div class="fixed inset-0 transition-opacity mt-8">
+                                <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+                            </div>
+    
+                            <!-- Modal content -->
+                            <div class="flex-justify inline-block align-bottom bg-white rounded-lg text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                                <div class="bg-white pt-5 pb-4 sm:p-6 sm:pb-4">
+    
+                                    <!-- Modal header -->
+                                    <div class="sm:flex sm:items-center">
+                                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-white sm:mx-0 sm:h-10 sm:w-10">
+                                    <!-- Icon or image here -->
+                                      </div>
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-center">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                  <div class="text-2xl">&#x1F4E6; Volume Alert &#x1F4E6;</div>
+                                </h3>
+                                <div class="mt-2">
+                                    <p class="text-sm leading-5 text-gray-500">
+                                        <span>Additional Inbound Trucks:</span>
+                                        <p>Truck #MAC23 will arrive at 11:30 AM</p>
+
+                                        <!--Creates the text box to put in notes -->
+                                        <textarea class="w-full h-20 mt-2 border border-gray-300 justify-center rounded-md resize-none focus:outline-none focus:ring-2 text-italic focus:ring-indigo-500 focus:border-transparent" placeholder=" Additional Notes"></textarea>
+                                   
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="bg-gray-100 px-4 py-3 sm:px-6 sm:flex sm:justify-between sm:items-center">
+                      <h3 class="text-lg leading-6 font-medium text-black-900">
+                      </h3>
+                      <div class="flex mt-3 sm:mt-0">
+
+                        <!-- Confirm Button-->
+                            <span class="rounded-md shadow-sm ">
+                              <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-blue-500 text-base leading-6 font-medium text-white shadow-sm focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5" onclick="closeModal()">
+                                  Confirm
+                              </button>
+                          </span>
+                          <div class="hidden sm:block" style="width: 5px;"></div> <!-- Spacer for small screens -->
+                          
+                          <!-- Cancel Button that becomes red when you hover over it-->
+                          <span class="rounded-md shadow-sm">
+                            <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-black shadow-sm hover:text-red-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5" onclick="closeModal()">
+                                Cancel
+                            </button>
+                        </span>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <!-- JavaScript to open and close the modal -->
+        <script>
+        function openModal() {
+            document.getElementById("myModal").classList.remove("hidden");
+        }
+    
+        function closeModal() {
+        document.getElementById("myModal").classList.add("hidden");
+        }
+        </script>
+    <!--End of the popup modal-->
+
+
+      </div>            </div>
+                        <div class  = "mt-3">
+                            <!--Staff Alert-->
+                            <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 hidden">
+                                <div class="bg-white p-4 rounded shadow">
+                                  <p class="text-gray-900">17% of staff did not clock in at 8:00 AM</p>
+                                  <button id="closeBtn" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+                                </div>
+                            </div>
+                              
+                              <button id="openBtn" class="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
+                                <div class="text-2xl">&#x26A0; Staff Alert &#x26A0;</div>
+                                <span>10/20/2023 @10:30 AM</span>
+                                
+                              </button>
+                              
+                              <script>
+                                  const modal = document.getElementById('modal');
+                              const openBtn = document.getElementById('openBtn');
+                              const closeBtn = document.getElementById('closeBtn');
+                              
+                              // Show the modal when open button is clicked
+                              openBtn.addEventListener('click', () => {
+                                modal.classList.remove('hidden');
+                              });
+                              
+                              // Hide the modal when close button is clicked
+                              closeBtn.addEventListener('click', () => {
+                                modal.classList.add('hidden');
+                              });
+                              </script>
+                        </div>
+                            
+                                
+                        <div class  = "mt-3">
+                            <div>
+                                <div id="modala" class="fixed inset-0 flex items-center justify-center bg-gray-900 hidden">
+                                  <div class="bg-white p-4 rounded shadow">
+                                    <p class="text-gray-900">Truck #JAN25 is on course to arrive 10 minutes late at 7:30 PM</p>
+                                    <button id="closeBtna" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+                                  </div>
+                                </div>
+                                
+                                <button id="openBtna" class="bg-pink-400 hover:bg-pink-600 text-black font-bold py-2 px-4 rounded">
+                                  <div class="text-2xl">&#x23F0; Timing Alert &#x23F0;</div>
+                                  <span>10/19/2023 @6:30 PM</span>
+                                </button>
+                                
+                                <script>
+                                  document.addEventListener('DOMContentLoaded', function() {
+                                    const modala = document.getElementById('modala');
+                                    const openBtna = document.getElementById('openBtna');
+                                    const closeBtna = document.getElementById('closeBtna');
+                              
+                                    // Show the modal when open button is clicked
+                                    openBtna.addEventListener('click', () => {
+                                      modala.classList.remove('hidden');
+                                    });
+                              
+                                    // Hide the modal when close button is clicked
+                                    closeBtna.addEventListener('click', () => {
+                                      modala.classList.add('hidden');
+                                    });
+                                  });
+                                </script>
+                              </div>
+                        </div>
+                        <div class  = "mt-3">
+                            <div>
+                                <div>
+                                    <div id="modalb" class="fixed inset-0 flex items-center justify-center bg-gray-900 hidden">
+                                      <div class="bg-white p-4 rounded shadow">
+                                        <p class="text-gray-900">Tornado Warning has been issued in Memphis,TN from 5:00 - 6:00pm</p>
+                                        <button id="closeBtnb" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+                                      </div>
+                                    </div>
+                                    
+                                    <button id="openBtnb" class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded">
+                                      <div class="text-2xl">&#x2601; Environmental Alert &#x2601;</div>
+                                      <span>10/19/2023 @4:00 PM</span>
+                                    </button>
+                                    
+                                    <script>
+                                      document.addEventListener('DOMContentLoaded', function() {
+                                        const modalb = document.getElementById('modalb');
+                                        const openBtnb = document.getElementById('openBtnb');
+                                        const closeBtnb = document.getElementById('closeBtnb');
+                                  
+                                        // Show the modal when open button is clicked
+                                        openBtnb.addEventListener('click', () => {
+                                          modalb.classList.remove('hidden');
+                                        });
+                                  
+                                        // Hide the modal when close button is clicked
+                                        closeBtnb.addEventListener('click', () => {
+                                          modalb.classList.add('hidden');
+                                        });
+                                      });
+                                    </script>
+                                  </div>
+                                  
+                            </div>
+                        
+                        </div>
+                        <div class  = "mt-3">
+                            <div>
+                                <div>
+                                    <div id="modalc" class="fixed inset-0 flex items-center justify-center bg-gray-900 hidden">
+                                      <div class="bg-white p-4 rounded shadow">
+                                        <p class="text-gray-900">Plane #FLY11 is on course to arrive 5 minutes early at 4:45 PM</p>
+                                        <button id="closeBtnc" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+                                      </div>
+                                    </div>
+                                    
+                                    <button id="openBtnc" class="bg-pink-500 hov at 4:45 PMer:bg-pink-700 text-black font-bold py-2 px-4 rounded">
+                                      <div class="text-2xl">&#x23F0; Timing Alert &#x23F0;</div>
+                                      <span>10/20/2023 @4:00 PM</span>
+                                    </button>
+                                    
+                                    <script>
+                                      document.addEventListener('DOMContentLoaded', function() {
+                                        const modalc = document.getElementById('modalc');
+                                        const openBtnc = document.getElementById('openBtnc');
+                                        const closeBtnc = document.getElementById('closeBtnc');
+                                  
+                                        // Show the modal when open button is clicked
+                                        openBtnc.addEventListener('click', () => {
+                                          modalc.classList.remove('hidden');
+                                        });
+                                  
+                                        // Hide the modal when close button is clicked
+                                        closeBtnc.addEventListener('click', () => {
+                                          modalc.classList.add('hidden');
+                                        });
+                                      });
+                                    </script>
+                                  </div>
+                                  
+                            </div>
+                    
+
+
+                              
+    
+                        </div>
+
+                
+                        
+                    </div>
+                </div>
+            </div>
+  </div>
+
+
+            <!--This the second grid which it is the right part of the screen-->
+            <div class="h-screen">
+                <!--Placing things here for right-->
+                <div class = "grid">
+                </div>
+                  <!-- Weather widget-->
+                  <div class = "absolute w-50 h-50 top-15 right-7 z-10 rounded-lg bg-white">
+                    <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100">
+                        <div class="flex items-end justify-end h-35 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://source.unsplash.com/300x150/?skyline);">
+                            <p class="px-2 py-1 text-sm tracki dark:text-gray-100 dark:bg-gray-800 bg-white rounded shadow-lg">Tennesse</p>
+                        </div>
+                        <div class="flex justify-between p-4">
+                            <div class="flex flex-col flex-1 gap-4">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-2">
+                                        <span class="text-5xl font-semibold">36°</span>
+                                        <span class="text-lg dark:text-gray-400">/ 28°</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-12 h-12 dark:text-yellow-400 fill-current shrink-10">
+                                        <path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
+                                        <rect width="32" height="48" x="240" y="16"></rect>
+                                        <rect width="32" height="48" x="240" y="448"></rect>
+                                        <rect width="48" height="32" x="448" y="240"></rect>
+                                        <rect width="48" height="32" x="16" y="240"></rect>
+                                        <rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
+                                        <rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
+                                        <rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
+                                        <rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
+                                    </svg>
+                                </div>
+                                <p class="text-sm">Mostly sunny throughout the day.
+                                    <br>6-10 KPH winds.
+                                </p>
+                            </div>
+                            <div class="text-sm leadi">
+                                <div class="flex items-center"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-bold">8</span>
+                                <span class="text-sm">UV</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <span class="font-bold">5%</span>
+                                <span class="text-sm">Precip</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <span class="font-bold">14°</span>
+                                <span class="text-sm">Dew Point</span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
+                <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
+                <div class = "m-8 p-8 bg-transparent grid gap-4 rounded-lg"></div>
+                <!-- End of Weather Widget-->
+        
+
+                <!--This is the Routes widget-->
+                <div>
+                  <div class = "mt-auto">
+                    <div class="m-4 p-4 bg-white grid gap-4 rounded-lg auto-cols-auto"  style="margin-top: 0;">
+                       <h1 class="flex justify-items-center m-3 font-bold text-3xl">Routes</h1>
+                         <!-- Other content related to Routes -->
+                    </div>
+                  </div>
+                </div>
+
+                <!--This is where the employee widget-->
+                <div class = " mt-20 m-8 p-8 bg-gray-200 grid gap-5 rounded-lg  auto-cols-auto">
+                   <div class = "text-2xl">
+                    <h1 class = "flex justify-items-center m-3 font-bold text-2xl">
+                        Employees
+                    </h1>
+
+                    <!--This the pie chart that was created here (https://tailwindflex.com/kairi-greene/pie-chart-with-chartjs-and-tailwind-css)-->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="font-sans leading-normal tracking-normal mt-20">
+
+    <canvas id="myChart"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Clocked In', 'Clocked Out'],
+                datasets: [{
+                    data: [60, 39],
+                    backgroundColor: [
+                        'rgba(133, 105, 241)',
+                        'rgba(101, 143, 241)',
+                        
+                        
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor: 'black',
+                        fontSize: 14,
+                        padding: 20
+                    }
+                }
+            }
+        });
+    </script>
+    <!--End of the pie chart code-->
+
+</div>
+                   </div>
+                      
+                    <div class = "m-8 p-8 bg-gray-200 grid gap-4 rounded-lg"></div>
+                    
+                    
+                    
+                </div>
+            </div>
+          </div>
+          
+
+    </div>
+  </div>
+</body>
+    
+</html>
+m/css/css_dropdowns.asp-->
 
    <style>
     body {
