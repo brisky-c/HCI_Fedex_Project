@@ -369,13 +369,11 @@
             <!--This the second grid which it is the right part of the screen-->
             <div class="h-screen">
                 <!--Placing things here for right-->
-                <div class = "grid">
-                </div>
-                  <!-- Weather widget-->
+                <div class = "grid"> </div>
+             <!-- Weather widget-->
                   <div class="absolute top-15 right-7 z-10 hidden md:block w-full md:w-3/5 lg:w-1/3 xl:w-1/6">
                     <div class="bg-white rounded-lg">
-                        <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100 mx-auto">
-                               
+                        <div class="max-w-xs overflow-hidden rounded-lg shadow-lg dark:bg-gray-900 dark:text-gray-100 mx-auto">       
                         <div class="flex items-end justify-end h-35 p-4 dark:bg-gray-500 bg-center bg-cover" style="background-image: url(https://source.unsplash.com/300x150/?skyline);">
                             <p class="px-2 py-1 text-sm tracki dark:text-gray-100 dark:bg-gray-800 bg-white rounded shadow-lg">Tennesse</p>
                         </div>
@@ -398,12 +396,10 @@
                                         <rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
                                     </svg>
                                 </div>
-                                <p class="text-sm">Mostly sunny throughout the day.
-                                    <br>6-10 KPH winds.
-                                </p>
+                                <p class="text-sm">Mostly sunny throughout the day. <br>6-10 KPH winds.</p>
                             </div>
-                            <div class="text-sm leadi">
-                                <div class="flex items-center"></div>
+                            <div class="text-sm leading">
+                            <div class="flex items-center"></div>
                             </div>
                         </div>
                         <div class="flex items-center justify-between gap-8 p-4 border-t dark:text-gray-400 dark:border-gray-700">
@@ -423,34 +419,33 @@
                     </div>
                   </div>
                 <!-- End of Weather Widget-->
-              </div>
-
-                <!--This is the Routes widget-->
-                <div>
-                    <div class="urgent-alerts-container">
-                    <div class="m-2 p-4 bg-white grid gap-4 rounded-lg auto-cols-auto">
-                       <h1 class="flex justify-items-center font-bold text-3xl">Routes</h1>
-                       <h1 class ="flex justify-items-center text-l">just a place holder</h1>
-                         <!-- Other content related to Routes -->
-
-                    </div>
-                  </div>
-                </div>
+            </div>
+            </div>
+    
+<!--This is the Routes widget-->
+<div>
+    <!-- Routes widget -->
+    <div class="urgent-alerts-container">
+      <div class="m-2 p-4 bg-white grid gap-4 rounded-lg auto-cols-auto">
+          <h1 class="flex justify-items-center font-bold text-3xl">Routes</h1>
+          <h1 class="flex justify-items-center text-l">just a place holder</h1>
+          <!-- Other content related to Routes -->
+      </div>
+  </div>
 
                 <!--This is where the employee widget-->
-                <div>
-                  <div class="urgent-alerts-container">
+                <div class="urgent-alerts-container">
                   <div class="m-2 p-4 bg-white grid gap-4 rounded-lg auto-cols-auto">
-                     <h1 class="flex justify-items-center font-bold text-3xl">Employees</h1>
-                     <h1 class ="flex justify-items-center text-l">just a place holder</h1>
-                       <!-- Other content related to Routes -->
-                    <!--This the pie chart that was created here (https://tailwindflex.com/kairi-greene/pie-chart-with-chartjs-and-tailwind-css)-->
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                    <div class="font-sans leading-normal tracking-normal mt-20">
-                        <canvas id="myChart"></canvas>
-                        <script>
-                            var ctx = document.getElementById('myChart').getContext('2d');
-                            var myChart = new Chart(ctx, {
+                      <h1 class="flex justify-items-center font-bold text-3xl">Employees</h1>
+                      <h1 class="flex justify-items-center text-l">just a place holder</h1>
+                  
+                        <!-- Other content related to Employees -->
+                          <!-- This is the pie chart -->
+                          <div class="font-sans leading-normal tracking-normal mt-20">
+                            <canvas id="myChart"></canvas>
+                            <script>
+                                var ctx = document.getElementById('myChart').getContext('2d');
+                                var myChart = new Chart(ctx, {
                                 type: 'pie',
                                 data: {
                                     labels: ['Clocked In', 'Clocked Out'],
