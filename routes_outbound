@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title>Routes Inbound</title>
   <!-- Include Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -147,7 +147,7 @@
 </div>
 <!-- First Card -->
 <div class ="content mt-8 flex justify-center">
-    <div class="p-20 pl-96 pt-44 bg-white rounded shadow-md w-auto mx-4">
+    <div class="p-24 pl-96 pt-44 pb-36 bg-white rounded shadow-md w-auto mx-4">
       <div class = "pl-96"></div>
      <!-- Content Inside Card -->
       <div class="relative bottom-40 right-96">
@@ -158,8 +158,10 @@
     </div>
     <h2 class="relative bottom-48 right-80 text-4xl font-semibold mb-4">Routes</h2>
     <div class="flex items-center justify-end">
-        <div class="relative bottom-64 right-28">
-          <div class="relative bottom-4 right-20" >
+        
+          <div class="absolute top-1 right-96" >
+            <div class = "absolute top-28 right-96">
+              <div class = "absolute right-80">
     <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Outbound 
         <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -169,18 +171,20 @@
     <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 left-0">
         <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
           <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <a href="routes_inbound.html" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Inbound
            </a>
           </li>
           <li>
-            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <a href="routes_outbound.html" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
              Outbound
             </a>
           </li>
         </ul>
       </div> 
     </div>
+    </div>
+  </div>
     <style>
         .table-container {
            /* Add horizontal scroll if needed */
@@ -213,7 +217,7 @@
         }
       </style>
       
-  </div>
+
   <div class="flex items-center justify-end">
     <div class="relative bottom-52 right-28">
       <div class="relative bottom-4 right-20" >
@@ -222,8 +226,8 @@
     <button onclick="showTable('inProgress')" style="background-color: #f59e0b; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">In Progress</button>
     <button onclick="showTable('upcoming')" style="background-color: #38a169; color: white; margin-left: 8px;" class="font-bold px-4 py-2 rounded">Upcoming</button>
   </div>
-  <div class="table-container relative right-48 bottom-1" id="postTable">
-    <div class="relative right-8 top-20">
+  <div class="table-container relative right-28 bottom-1 hidden" id="postTable">
+    <div class="absolute right-9 top-6">
       <table>
         <thead>
           <tr>
@@ -282,8 +286,8 @@
     </div>
   </div>
 
-  <div class="table-container relative right-48 bottom-1" id="inProgressTable">
-    <div class="relative right-8 top-20">
+  <div class="table-container relative right-28 bottom-1 hidden" id="inProgressTable">
+    <div class="absolute right-9 top-6">
       <table>
         <thead>
           <tr>
@@ -342,8 +346,8 @@
     </div>
   </div>
 
-  <div class="table-container relative right-48 bottom-1" id="upcomingTable">
-    <div class="relative right-8 top-20">
+  <div class="table-container relative right-28 bottom-1 hidden" id="upcomingTable">
+    <div class="absolute right-9 top-6">
       <table>
         <thead>
           <tr>
