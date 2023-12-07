@@ -1,0 +1,162 @@
+<!--Just get this done-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(180deg, #7e4f9c, #f1bd88);
+      min-height: 100vh;
+    }
+    .taskbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #7e4f9c; /* Customize taskbar background color */
+      color: white; /* Customize taskbar text color */
+      padding: 10px 20px; /* Adjust padding as needed */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+      display: flex; /* Utilize flexbox to align items */
+      align-items: center; /* Vertically center items */
+      justify-content: space-between; /* Space items apart */
+    }
+    /* Optional styles for content below the taskbar */
+    .content {
+      flex: 1;
+      padding-top: 60px; /* Adjust padding to prevent content from being hidden behind the taskbar */
+      padding-left: 20px;
+      padding-right: 20px;
+      z-index: 999;
+    }
+    /* Style for the profile picture */
+    .profile-picture {
+      width: 45px; /* Adjust width as needed */
+      height: 40px; /* Adjust height as needed */
+      border-radius: 50%; /* Make it circular */
+      margin-right: auto; /* Add some spacing between the picture and FedEx logo */
+    }
+    .fedex-logo {
+      width: 100px; /* Adjust width as needed */
+      height: 30px; /* Adjust height as needed */
+    }
+    .custom-card { /* Adjust background color if needed */
+      padding: 8px; /* Adjust padding */
+      border-radius: 8px; /* Add border-radius */
+    }
+    .image-sharpen {
+      filter: contrast(130%);
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- Taskbar -->
+<div class="taskbar">
+    <div class="flex items-center">
+        <!-- Profile Picture -->
+        <button id="profile-dropdown" class="focus:outline-none">
+        <img src="C:\Users\Brisa\Documents\Fedex Project\fedex_truck.jpg" alt="Profile Picture" class="w-8 h-8 rounded-full image-sharpen">
+        </button>
+        <!-- Text Beside Profile Picture -->
+        <div class="ml-2">
+        <p class="text-sm font-semibold">Welcome Jane Doe</p>
+        <p class="text-xs italic">Memphis, TN</p>
+        </div>
+    </div>
+
+  <!-- FedEx Logo -->
+        <a href="https://www.fedex.com/en-us/home.html" target="_blank">
+            <img src="C:\Users\Brisa\Documents\Fedex Project\logo.png" alt="FedEx Logo" class="fedex-logo">
+        </a>
+        </div>
+        </div>
+        <!-- Dropdown Content - Initially Hidden -->
+        <div id="dropdown-content" class="absolute hidden bg-white rounded shadow-md py-2 mt-4 w-32">
+        <!-- Dropdown Links -->
+        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
+        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+        <a href="fedex_login_page.html" class="block px-6 py-4 text-gray-800 hover:bg-gray-200 hover:no-underline">Logout</a>
+        </div>
+  </div>
+  <script>
+      const dropdown = document.getElementById('dropdown-content');
+      const profileDropdown = document.getElementById('profile-dropdown');
+      
+      // Toggle dropdown visibility
+      profileDropdown.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+    
+      // Close dropdown if user clicks outside of it
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('#profile-dropdown')) {
+          dropdown.classList.add('hidden');
+        }
+      });
+    
+      // Allow logout when clicking the logout button
+      const logoutButton = document.getElementById('logout-button');
+      logoutButton.addEventListener('click', function() {
+        window.location.href = 'fedex_login_page.html';
+      });
+
+  </script>
+
+  <!--First Card -->  
+<div class ="content mt-4 flex justify-center mt-4 mb-5">
+    <div class="bg-white p-14 rounded rounded-lx shadow-md rounded shadow-md w-screen  mx-4">
+      <!-- Content Inside Card -->
+       <!-- Text "Routes" -->
+    <h1 class="flex text-3xl font-bold mb-4">
+      <a href="zoe_main_page.html">
+        <img src="https://img.icons8.com/ios-filled/50/000000/home.png" class="w-9 h-9 mr-8" alt="Home Icon"> </a>
+        Routes</h1>
+      <!-- Top Inner Card-->
+      <div class="flex-1 bg-gray-200 rounded-lg p-4">
+        <h3 class="text-xl text-center font-semibold mb-4">Truck Number: MAC7951</h3>
+        <div class="flex-1 justify-center"> <!-- Adjust the flex alignment -->
+          <img src="fedex_express_truck.png" alt="FedEx truck" class="max-w-full h-auto"> <!-- Update image size -->
+        </div>
+
+      </div>
+      
+      <!-- Lower Inner Card-->
+      <div class="flex-1 bg-gray-200 rounded-lg p-4 py-1 mt-4 mb-5">
+        <h3 class="text-xl text-left font-bold mb-4">Driver Information</h3>
+        <p class="font-semibold text-left mt-8">Driver:                     Abby Lee </p>
+        <p class="font-semibold text-left mt-8">Status:                     Late</p>
+        <p class="font-semibold text-left mt-8">ETA:                        3:21pm Local Time </p>
+        <p class="font-semibold text-left mt-8">Current Location:           Collerville, TN </p>
+      
+      </div>
+      <div class="flex bottom-2 left-10 mb-2">
+        <a href="#" onclick="window.history.back(); return false;" class="flex items-center bg-blue-500 text-white px-4 py-2 rounded-md shadow-md">
+          <span class="mr-2"> <!-- Margin between icon and text -->
+              <!-- Icon representing a left arrow (you can replace this with your desired icon) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.707 4.293a1 1 0 0 1 1.414 1.414L8.414 10l3.707 3.293a1 1 0 1 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 0 1.414z" />
+              </svg>
+          </span>
+          Back
+      </a>
+        </div>
+    </div>
+  <!-- Google Maps -->
+  <div class="w-screen mx-4 rounded rounded-2xl shadow-md rounded shadow-md">
+    <iframe 
+    width="100%" 
+    height="100%" 
+    frameborder="0" style="border:0" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.9228350448724!2d-89.97732799082667!3d35.14953423453292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887f80e21a44bf2f%3A0x4c19122f8c692f50!2sMemphis%2C%20TN!5e0!3m2!1sen!2sus!4v1638846735808!5m2!1sen!2sus" 
+    allowfullscreen=""
+></iframe>
+
+</div>
+</div>
