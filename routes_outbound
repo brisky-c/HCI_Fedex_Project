@@ -232,7 +232,7 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Time</th>
+            <th>ETA</th>
             <th>Type</th>
             <th>Volume</th>
             <th>Employee</th>
@@ -240,46 +240,46 @@
         </thead>
         <tbody>
           <tr>
-            <td>231825</td>
-            <td>1:24 pm</td>
-            <td>Plane</td>
-            <td>25%</td>
-            <td>John Doe</td>
+            <td class="green-cell">231825</td>
+            <td class="green-cell">1:24 pm</td>
+            <td class="green-cell">Plane</td>
+            <td class="green-cell">25%</td>
+            <td class="green-cell">John Doe</td>
           </tr>
           <tr>
             <td class="red-cell">251856</td>
-            <td class="red-cell">3:21 pm</td>
+            <td class="red-cell">12:01 pm</td>
             <td class="red-cell">Plane</td>
             <td class="red-cell">85%</td>
             <td class="red-cell">Abby Lee</td>
           </tr>
           <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
+            <td class="green-cell">251251</td>
+            <td class="green-cell">11:21 am</td>
+            <td class="green-cell">Truck</td>
+            <td class="green-cell">51%</td>
+            <td class="green-cell">Travis Scott</td>
+          </tr>
+          <tr>
+            <td class="green-cell">251521</td>
+            <td class="green-cell">9:38 pm</td>
             <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
+            <td class="green-cell">34%</td>
+            <td class="green-cell">Emily Elton</td>
+          </tr>
+          <tr>
+            <td class="green-cell">251125</td>
+            <td class="green-cell">7:59 am</td>
+             <td class="green-cell">Truck</td>
+            <td class="green-cell">83%</td>
             <td class="green-cell">Mike Schimet</td>
           </tr>
           <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
-            <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
-            <td class="green-cell">Mike Schimet</td>
-          </tr>
-          <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
-             <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
-            <td class="green-cell">Mike Schimet</td>
-          </tr>
-          <tr>
-            <td class="red-cell">251856</td>
-            <td class="red-cell">3:21 pm</td>
+            <td class="red-cell">251777</td>
+            <td class="red-cell">5:12 am</td>
             <td class="red-cell">Plane</td>
-            <td class="red-cell">85%</td>
-            <td class="red-cell">Abby Lee</td>
+            <td class="red-cell">45%</td>
+            <td class="red-cell">Cindy Lou</td>
           </tr>
         </tbody>
       </table>
@@ -292,7 +292,7 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Time</th>
+            <th>ETA</th>
             <th>Type</th>
             <th>Volume</th>
             <th>Employee</th>
@@ -300,46 +300,46 @@
         </thead>
         <tbody>
           <tr>
-            <td>231825</td>
+            <td>231168</td>
             <td>Now</td>
             <td>Plane</td>
-            <td>25%</td>
-            <td>John Doe</td>
+            <td>22%</td>
+            <td>Samuel Adams</td>
           </tr>
           <tr>
-            <td class="yellow-cell">251856</td>
-            <td class="yellow-cell">3:21 pm</td>
+            <td class="yellow-cell">251762</td>
+            <td class="yellow-cell">7:21 pm</td>
             <td class="yellow-cell">Truck</td>
-            <td class="yellow-cell">85%</td>
-            <td class="yellow-cell">Abby Lee</td>
+            <td class="yellow-cell">89%</td>
+            <td class="yellow-cell">Stevie Wonder</td>
           </tr>
           <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
+            <td class="green-cell">251127</td>
+            <td class="green-cell">5:58 pm</td>
             <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
-            <td class="green-cell">Mike Schimet</td>
+            <td class="green-cell">76%</td>
+            <td class="green-cell">Julie James</td>
           </tr>
           <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
-            <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
-            <td class="green-cell">Mike Schimet</td>
+            <td class="green-cell">251651</td>
+            <td class="green-cell">4:20 pm</td>
+            <td class="green-cell">Truck</td>
+            <td class="green-cell">54%</td>
+            <td class="green-cell">Lexie Underwood</td>
           </tr>
           <tr>
-            <td class="green-cell">251856</td>
-            <td class="green-cell">3:21 pm</td>
-            <td class="green-cell">Plane</td>
-            <td class="green-cell">85%</td>
-            <td class="green-cell">Mike Schimet</td>
+            <td class="green-cell">251265</td>
+            <td class="green-cell">1:36 pm</td>
+            <td class="green-cell">Truck</td>
+            <td class="green-cell">91%</td>
+            <td class="green-cell">Zach Bryan</td>
           </tr>
           <tr>
-            <td class="yellow-cell">251856</td>
-            <td class="yellow-cell">3:21 pm</td>
+            <td class="yellow-cell">251911</td>
+            <td class="yellow-cell">12:39 pm</td>
             <td class="yellow-cell">Plane</td>
-            <td class="yellow-cell">85%</td>
-            <td class="yellow-cell">Abby Lee</td>
+            <td class="yellow-cell">19%</td>
+            <td class="yellow-cell">Faith McGraw</td>
           </tr>
         </tbody>
       </table>
@@ -352,7 +352,7 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Time</th>
+            <th>ETA</th>
             <th>Type</th>
             <th>Volume</th>
             <th>Employee</th>
@@ -360,46 +360,46 @@
         </thead>
         <tbody>
           <tr>
-            <td>231825</td>
+            <td>231223</td>
             <td>1:24 pm</td>
-            <td>Plane</td>
-            <td>25%</td>
-            <td>John Doe</td>
+            <td>Truck</td>
+            <td>28%</td>
+            <td>Susan Sanders</td>
           </tr>
           <tr>
-            <td>251856</td>
-            <td>3:21 pm</td>
+            <td>251365</td>
+            <td>12:27 pm</td>
             <td>Plane</td>
-            <td>85%</td>
-            <td>Abby Lee</td>
+            <td>72%</td>
+            <td>Zach Cody</td>
           </tr>
           <tr>
-            <td>251856</td>
-            <td>3:21 pm</td>
+            <td>251892</td>
+            <td>10:58 am</td>
             <td>Plane</td>
-            <td>85%</td>
-            <td>Mike Schimet</td>
+            <td>43%</td>
+            <td>Zoe Wunowan</td>
           </tr>
           <tr>
-            <td>251856</td>
-            <td>3:21 pm</td>
-            <td>Plane</td>
-            <td>85%</td>
-            <td>Mike Schimet</td>
+            <td>251030</td>
+            <td>9:28 am</td>
+            <td>Truck</td>
+            <td>67%</td>
+            <td>Rufus Ravioli</td>
           </tr>
           <tr>
-            <td>251856</td>
-            <td>3:21 pm</td>
-            <td>Plane</td>
-            <td>85%</td>
-            <td>Mike Schimet</td>
+            <td>251908</td>
+            <td>7:29 am</td>
+            <td>Truck</td>
+            <td>76%</td>
+            <td>Tony Soprano</td>
           </tr>
           <tr>
-            <td>251856</td>
-            <td>3:21 pm</td>
+            <td>251504</td>
+            <td>5:53 am</td>
             <td>Plane</td>
-            <td>85%</td>
-            <td>Abby Lee</td>
+            <td>10%</td>
+            <td>Nancy Drew</td>
           </tr>
         </tbody>
       </table>
@@ -428,4 +428,3 @@
 </html>
 
 <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-
