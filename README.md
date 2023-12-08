@@ -27,8 +27,8 @@ The user feedback that we got weren't for major changes to our application. We l
 
 So, in the end we kept to a similar design for the final prototype changed a lot of the color that we had before, lined up our widgets better when you click on them, and adding a better weather icon that sures more information. ​
 
-​### Problems during development:
-Beginners to HTML, CSS, and JavaScript, so we had to learn it on top of developing this application
+​### Development Challenges:
+Beginners to HTML, CSS, and JavaScript, so we had to learn it on top of developing this application.
 
 
 
