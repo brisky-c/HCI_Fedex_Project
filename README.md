@@ -30,3 +30,7 @@ module.exports = {
 Require the JavaScript code that powers the interactive elements before the end of your <body> tag:
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 Learn more about the Flowbite JavaScript API and functionalities in the JavaScript section.
+
+### INSTALL Chart.JS for graphs
+
+npm install chart.js
